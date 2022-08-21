@@ -3,7 +3,14 @@
 #include<fstream>
 #include <vector>
 
-int main(){
+int main(int argc, char *argv[]){
+    std::string usage="hist <STR>\n hist command will parse through, that have STR as prefix.";
+    // Validate cli args
+    if (argc>2||argc<2){
+        std::cout<<usage<<std::endl;
+        exit(1);
+    }
+
     trie word_list;
     std::fstream fo;
     fo.open("/home/anton/.bash_history",std::ios_base::in);
@@ -19,12 +26,10 @@ int main(){
     }
 
     // Get prefix
-    std::string prefix;
-    std::cout<<"enter prefix"<<std::endl;
-    std::cin>>prefix;
+    std::string prefix = argv[1]; 
     
     // Get list of all the suggestions
-    std::vector<std::string> res= word_list.suggestions("git");
+    std::vector<std::string> res= word_list.suggestions(prefix);
     
     // Print all the suggestions
     for (auto x: res){
