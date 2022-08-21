@@ -15,7 +15,6 @@ void trie::insert(const std::string word){
 }
 void trie::getallwords(trienode *root,std::vector<std::string>& res, std::string word){
     if(root->end_of_word==true||root->children.size()==0){
-        std::cout<<"word found"<<word<<std::endl;
         res.push_back(word);
     }
 
