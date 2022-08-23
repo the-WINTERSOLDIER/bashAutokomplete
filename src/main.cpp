@@ -7,6 +7,9 @@
 #include<string>
 
 
+void write_string(std::string & command){
+
+}
 int main(int argc, char *argv[]){
     std::string usage="USAGE: bashAutokomplete <STR>\nbashAutokomplete command will cycle  through commands that have STR as prefix , using tab key.";
     // Validate cli args
