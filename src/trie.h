@@ -1,6 +1,5 @@
 #ifndef TRIE_H
 #define TRIE_H
-
 #include<map>
 #include<string>
 #include<vector>
