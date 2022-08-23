@@ -10,7 +10,7 @@ void write_string(std::string & command){
 
 }
 int main(int argc, char *argv[]){
-    std::string usage="hist <STR>\n hist command will parse through, that have STR as prefix.";
+    std::string usage="USAGE: bashAutokomplete <STR>\nbashAutokomplete command will cycle  through commands that have STR as prefix , using tab key.";
     // Validate cli args
     if (argc>2||argc<2){
         std::cout<<usage<<std::endl;
