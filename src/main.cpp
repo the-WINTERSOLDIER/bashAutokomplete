@@ -2,7 +2,7 @@
 #include"trie.h"
 #include<fstream>
 #include <vector>
-
+#include <ncurses.h>
 int main(int argc, char *argv[]){
     std::string usage="hist <STR>\n hist command will parse through, that have STR as prefix.";
     // Validate cli args
@@ -10,6 +10,8 @@ int main(int argc, char *argv[]){
         std::cout<<usage<<std::endl;
         exit(1);
     }
+    
+    // Documentation on Escape Sequence https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
 
     trie word_list;
     std::fstream fo;

@@ -1,8 +1,6 @@
 #include"trie.h"
 #include<iostream>
 
-
-
 void trie::insert(const std::string word){
     trienode *temp = &(this->root);
     for( char letter : word){
@@ -13,6 +11,7 @@ void trie::insert(const std::string word){
         }
         temp->end_of_word = true;
 }
+
 void trie::getallwords(trienode *root,std::vector<std::string>& res, std::string word){
     if(root->end_of_word==true||root->children.size()==0){
         res.push_back(word);
@@ -37,4 +36,3 @@ std::vector<std::string> trie::suggestions(std::string word){
     this->getallwords(temp,res,word);
     return res;
 }
-
