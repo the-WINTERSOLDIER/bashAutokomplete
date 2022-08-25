@@ -14,8 +14,8 @@ class trie{
     private:
         trienode root;
     public:
-        void insert(const std::string);
-        std::vector<std::string> suggestions(std::string);
-        void getallwords(trienode* ,std::vector<std::string> &res, std::string);
+        void insert(const std::string&);
+        std::vector<std::string> suggestions(const std::string&);
+        void getallwords(const trienode* ,std::vector<std::string> &, const std::string&);
 };
 #endif
